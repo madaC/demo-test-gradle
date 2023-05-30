@@ -1,0 +1,24 @@
+plugins {
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+task testJar(type: Jar, dependsOn: testClasses) {
+	from sourceSets.test.allSource
+	archiveClassifier.set("test")
+}
