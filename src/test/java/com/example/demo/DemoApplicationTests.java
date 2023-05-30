@@ -1,11 +1,11 @@
 package com.example.demo;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class DemoApplicationTests {
+public class DemoApplicationTests {
 
 	@Test
-	void test1() {
+	public void test1() {
 		System.out.println("Test passed");
 	}
 
